@@ -1,0 +1,88 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid nav-bg">
+    <div class="navbar-header">
+      <img class="nav-logo" src="../assets/w.png" />
+      <a class="navbar-brand" style="color: white" href="#">Welcome!</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a href="#!/dashboard/profile" style="color: #ffdd00">My Profile</a>
+      </li>
+      <li class="login">
+        <a href="#!/home" style="color: #ffdd00">Log out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div>
+  <h4>Single toggle</h4>
+  <pre>{{singleModel}}</pre>
+  <button
+    type="button"
+    class="btn btn-primary"
+    ng-model="singleModel"
+    uib-btn-checkbox
+    btn-checkbox-true="1"
+    btn-checkbox-false="0"
+  >
+    Single Toggle
+  </button>
+  <h4>Checkbox</h4>
+  <pre>Model: {{checkModel}}</pre>
+  <pre>Results: {{checkResults}}</pre>
+  <div class="btn-group">
+    <label class="btn btn-primary" ng-model="checkModel.left" uib-btn-checkbox
+      >Left</label
+    >
+    <label class="btn btn-primary" ng-model="checkModel.middle" uib-btn-checkbox
+      >Middle</label
+    >
+    <label class="btn btn-primary" ng-model="checkModel.right" uib-btn-checkbox
+      >Right</label
+    >
+  </div>
+  <h4>Radio &amp; Uncheckable Radio</h4>
+  <pre>{{radioModel || 'null'}}</pre>
+  <div class="btn-group">
+    <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Left'"
+      >Left</label
+    >
+    <label
+      class="btn btn-primary"
+      ng-model="radioModel"
+      uib-btn-radio="'Middle'"
+      >Middle</label
+    >
+    <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Right'"
+      >Right</label
+    >
+  </div>
+  <div class="btn-group">
+    <label
+      class="btn btn-success"
+      ng-model="radioModel"
+      uib-btn-radio="'Left'"
+      uncheckable
+      >Left</label
+    >
+    <label
+      class="btn btn-success"
+      ng-model="radioModel"
+      uib-btn-radio="'Middle'"
+      uncheckable
+      >Middle</label
+    >
+    <label
+      class="btn btn-success"
+      ng-model="radioModel"
+      uib-btn-radio="'Right'"
+      uib-uncheckable="uncheckable"
+      >Right</label
+    >
+  </div>
+  <div>
+    <button class="btn btn-default" ng-click="uncheckable = !uncheckable">
+      Toggle uncheckable
+    </button>
+  </div>
+</div>

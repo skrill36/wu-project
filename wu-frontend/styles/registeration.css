@@ -1,0 +1,21 @@
+.form-items {
+  padding: 1rem 1rem;
+  width: 80%;
+}
+
+.form-middle {
+  padding: 0 6.5rem;
+}
+
+.form-inline {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+
+.r-validate {
+  width: 50%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
